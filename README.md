@@ -1,2 +1,2 @@
 # DMBS
-Data base
+Database
