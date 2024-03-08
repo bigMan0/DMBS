@@ -1,5 +1,5 @@
 # DMBS
-Medi-Track | An easy solution to the problem of accessing  medical records.
+# Medi-Track | An easy solution to the problem of accessing  medical records.
 
 
 Here we have a Database management systems project that solves the issue of accessing medical records for patients and doctors.
