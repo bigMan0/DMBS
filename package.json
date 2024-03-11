@@ -19,6 +19,7 @@
   "homepage": "https://github.com/bigMan0/DMBS#readme",
   "dependencies": {
     "@supabase/supabase-js": "^2.39.7",
+    "body-parser": "^1.20.2",
     "express": "^4.18.3"
   }
 }
