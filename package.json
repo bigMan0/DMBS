@@ -1,0 +1,24 @@
+{
+  "name": "dmbs",
+  "version": "1.0.0",
+  "description": "Here we have a **Database management systems** project that solves the issue of accessing medical records for patients and doctors.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bigMan0/DMBS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bigMan0/DMBS/issues"
+  },
+  "homepage": "https://github.com/bigMan0/DMBS#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.7",
+    "express": "^4.18.3"
+  }
+}
