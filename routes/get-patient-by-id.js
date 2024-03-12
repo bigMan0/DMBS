@@ -1,4 +1,4 @@
-exports.getPatientById = async (req, res) => {
+exports.getPatientById = async (req, res, supabase) => {
     const { health_card } = req.params;
     try{
         const{data,error} = await supabase.from('Patients').select('*').eq('health_card',health_card);
@@ -14,7 +14,6 @@ exports.getPatientById = async (req, res) => {
         console.error(err);
         res.status(500).json({message: 'Error fetching patient'})
     }
-
 
 };
 
