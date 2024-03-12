@@ -1,4 +1,4 @@
-exports.getAllRecords = async (req, res) => {
+exports.getAllRecords = async (req, res, supabase) => {
     try {
       const { data, error } = await supabase.from('Records').select('*'); 
       if (error) {
