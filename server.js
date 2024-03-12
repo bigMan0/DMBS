@@ -13,5 +13,15 @@ const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_ANO
 app.use(bodyParser.json());
 
 // ... (define routes and middleware here)
+const {getAllPatients} = require('./routes/get-all-patients');
+const { getAllDepartments } = require('./routes/get-all-departments');
+const {getAllRecords} = require('./routes/get-all-records');
+const {getAllProcedeurs} = require('./routes/get-all-procedeurs');
+
+
+app.get('/Patients', getAllPatients);
+app.get('/Departments', getAllDepartments);
+app.get('/Records',getAllRecords);
+app.get('/Proceduers',getAllProcedeurs);
 
 app.listen(port, () => console.log('Server Listening on port ${port}'))

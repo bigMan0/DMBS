@@ -1,6 +1,6 @@
-exports.getAllPatients = async (res) => {
+exports.getAllRecords = async (req, res) => {
     try {
-      const { data, error } = await supabase.from('Records').select('*'); // Replace 'patients' with your table name
+      const { data, error } = await supabase.from('Records').select('*'); 
       if (error) {
         console.error(error);
         return res.status(500).json({ message: 'Error fetching Records' });
