@@ -1,0 +1,20 @@
+.menu-popup {
+    display: none;
+    position: fixed;
+    top: 56px; /* Height of the navbar */
+    right: 0;
+    width: 200px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    z-index: 1000;
+}
+
+.menu-popup.show {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .menu-popup {
+        width: 100%;
+    }
+}

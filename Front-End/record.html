@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Record - Hospital Management System</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Hospital Management System</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="patient_dashboard.html">Dashboard <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="record.html">Records</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="book_appointment.html">Book Appointment</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-secondary text-white">
+                    Past Procedures
+                </div>
+                <ul class="list-group list-group-flush">
+                    <!-- Repeat for each record -->
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col"><strong>Date</strong></div>
+                            <div class="col"><strong>Time</strong></div>
+                            <div class="col"><strong>Appointment Number</strong></div>
+                        </div>
+                    </li>
+                    <!-- Record items -->
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-secondary text-white">
+                    Records
+                </div>
+                <ul class="list-group list-group-flush">
+                    <!-- Repeat for each record -->
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col"><strong>Date</strong></div>
+                            <div class="col"><strong>Time</strong></div>
+                            <div class="col"><strong>Appointment Number</strong></div>
+                        </div>
+                    </li>
+                    <!-- Record items -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer bg-light mt-5">
+    <div class="container text-center py-3">
+        <p class="text-muted">© 2024 Hospital Management System</p>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

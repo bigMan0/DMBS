@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Patient Dashboard - Hospital Management System</title>
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-primary">
+    <a class="navbar-brand" href="patient_dashboard.html">Hospital Management System</a>
+    <button class="navbar-toggler" type="button" onclick="toggleMenu()">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</nav>
+
+<div id="menu-popup" class="menu-popup">
+    <!-- Popup Menu -->
+    <button onclick="location.href='patient_dashboard.html'" class="btn btn-primary w-100 mt-2">Dashboard</button>
+    <button onclick="location.href='record.html'" class="btn btn-primary w-100 mt-2">Record</button>
+    <button onclick="location.href='book_appointment.html'" class="btn btn-primary w-100 mt-2">Book Appointment</button>
+</div>
+
+<div class="container mt-4">
+    <header class="text-center">
+        <h1>Welcome, [Patient Name]</h1>
+    </header>
+
+    <section id="patient-appointments" class="mt-4">
+        <h2 class="mb-3">Your Upcoming Appointment</h2>
+        <div class="list-group">
+            <!-- Repeat this item for each appointment -->
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">[Date]</h5>
+                    <small>[Time]</small>
+                </div>
+                <p class="mb-1">Appointment Number: [Appointment Number]</p>
+            </a>
+            <!-- End of appointment item -->
+        </div>
+    </section>
+
+    <footer class="footer mt-4 py-3 bg-light">
+        <div class="container text-center">
+            <p>© 2024 Hospital Management System</p>
+        </div>
+    </footer>
+</div>
+
+<script>
+    function toggleMenu() {
+        var menuPopup = document.getElementById("menu-popup");
+        menuPopup.classList.toggle('show');
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Hospital Management System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        .toggle-bar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .toggle-bar button {
+            background-color: #f8f9fa;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .toggle-bar button.active {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .toggle-bar button i {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="container">
+            <h1 class="text-center">Admin Dashboard</h1>
+            <div class="toggle-bar">
+                <button id="recordsBtn" class="btn btn-primary active"><i class="fas fa-file-alt"></i> Records</button>
+                <button id="appointmentsBtn" class="btn btn-primary"><i class="far fa-calendar-alt"></i> Appointments</button>
+                <button id="addPatientBtn" class="btn btn-success"><i class="fas fa-user-plus"></i> Add Patient</button>
+                <button id="deletePatientBtn" class="btn btn-danger"><i class="fas fa-user-minus"></i> Delete Patient</button>
+                <button id="cancelAppointmentBtn" class="btn btn-warning"><i class="fas fa-calendar-times"></i> Cancel Appointment</button>
+                <a href="#" id="logoutBtn" class="btn btn-secondary"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="all-records" class="dashboard-section">
+        <div class="container">
+            <h2 class="text-center">All Patient Records</h2>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Date of Birth</th>
+                        <th>Address</th>
+                        <th>Contact Info</th>
+                        <th>Gender</th>
+                        <th>Health Card Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Repeat <tr> for each patient record -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="all-appointments" class="dashboard-section">
+        <div class="container">
+            <h2 class="text-center">All Appointments</h2>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Repeat <tr> for each appointment -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.toggle-bar button').click(function(){
+                $('.toggle-bar button').removeClass('active');
+                $(this).addClass('active');
+            });
+
+            $('#recordsBtn').click(function(){
+                $('#all-appointments').hide();
+                $('#all-records').show();
+            });
+
+            $('#appointmentsBtn').click(function(){
+                $('#all-records').hide();
+                $('#all-appointments').show();
+            });
+
+            // Add other button functions here
+        });
+    </script>
+</body>
+</html>
