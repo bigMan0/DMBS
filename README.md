@@ -12,7 +12,7 @@ Patients will only have access to their own desgnated records and will not have 
 The Administrator will have access to all details, to act as a control.
 
 
-As a TechStack, We will be using **HTML, CSS and JavaScript for our front end** and will be using **js as our backend**.
+As a TechStack, We will be using **HTML, CSS and JavaScript for our front end** and will be using **Express.js as our backend**.
 We will be using Supabase as our database, as it provides us with a clean easy to navigate UI and it is easy to integrate into React.js.
 
 The Contributors to this project:
