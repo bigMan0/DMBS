@@ -28,7 +28,12 @@ const {getPatientById} = require('./routes/get-patient-by-id');
 const {getBookingbyId} = require('./routes/get-booking-by-id');
 
 //POSTS
-const {addpatients} = require('./routes/add-patient');
+const {addpatient} = require('./routes/add-patient');
+const {adddepartment} = require('./routes/add-departments');
+const {addrecord} = require('./routes/add-record');
+const {addprocedeur} = require('./routes/add-procedeurs');
+const {addbooking} = require('./routes/add-booking');
+
 
 //getting all rows of the table.
 app.get('/Patients', (req, res) => getAllPatients(req, res, supabase));

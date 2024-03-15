@@ -1,4 +1,4 @@
-exports.addpatients = async (req, res, supabase) => {
+exports.addpatient = async (req, res, supabase) => {
     const {health_card, first_name, last_name, address, phone, dob, gender} = req.body;
     try{
         const {data, error} = await supabase.from('Patients').insert(
