@@ -1,7 +1,7 @@
 exports.adddepartment = async (req, res, supabase) => {
     const {staff_number, staff_fname, department, staff_lname} = req.body;
     try{
-        const {data, error} = await supabase.from('Patients').insert(
+        const {data, error} = await supabase.from('Department').insert(
             [{staff_number: staff_number
             ,staff_fname: staff_fname
             , department: department
