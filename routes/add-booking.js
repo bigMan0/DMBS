@@ -6,12 +6,8 @@ exports.addbooking = async (req, res, supabase) => {
         console.error('Invalid date');
         return res.status(400).json({ error: 'Invalid date' });
     }
-
     let timeParts = appointment_time.split(":");
-    let appointmentTimeDate = new Date();
-    appointmentTimeDate.setHours(timeParts[0]);
-    appointmentTimeDate.setMinutes(timeParts[1]);
-    appointmentTimeDate.setSeconds(timeParts[2]);
+    let appointmentTimeDate = new Date(Date.UTC(1970, 0, 1, timeParts[0], timeParts[1], timeParts[2]));
     
     let formattedTime = appointmentTimeDate.toISOString().substr(11, 8);
 
