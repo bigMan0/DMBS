@@ -53,7 +53,7 @@ app.get('/Records/:health_card', (req, res) => getPatientRecords(req, res, supab
 app.get('/Patients/:health_card', (req, res) => getPatientById(req, res, supabase));
 app.get('/Bookings/:health_card', (req, res) => getBookingbyId(req, res, supabase));
 app.get('/Department/:staff_number', (req, res) => getDepartmentbyid(req, res, supabase));
-
+app.get('/Procedures/:health_card', (req, res) => getProcedureById(req, res, supabase));
 
 //adding new rows to the table
 app.post('/Patients', (req, res) => addpatient(req, res, supabase));
@@ -68,7 +68,7 @@ app.delete('/Patients/:health_card', (req, res) => removePatient(req, res, supab
 app.delete('/Department/:staff_number', (req, res) => removeDepartment(req, res, supabase));
 app.delete('/Records/:health_card', (req, res) => removeRecord(req, res, supabase));
 app.delete('/Procedures/:health_card', (req, res) => removeProcedeur(req, res, supabase));
-app.delete('/Bookings/:health_card', (req, res) => removeBooking(req, res, supabase));
+app.delete('/Bookings/:appointment_number', (req, res) => removeBooking(req, res, supabase));
 
 
 app.listen(port, () => console.log(`Server Listening on port ${port}`))
