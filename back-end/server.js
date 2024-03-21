@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 require('dotenv').config(); // Load environment variables
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 
 //Supabase client
 /**
@@ -73,4 +73,3 @@ app.delete('/Bookings/:appointment_number', (req, res) => removeBooking(req, res
 
 app.listen(port, () => console.log(`Server Listening on port ${port}`))
 
-//
