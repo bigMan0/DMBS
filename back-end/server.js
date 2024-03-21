@@ -4,8 +4,8 @@ const bodyParser = require('body-parser');
 require('dotenv').config(); // Load environment variables
 
 const app = express();
-const port = process.env.PORT || 3000;
-
+const port = process.env.PORT || 5000;
+const cors = require('cors');
 //Supabase client
 /**
  * Supabase client instance.
@@ -17,7 +17,7 @@ const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_ANO
 app.use(bodyParser.json());
 
 // ... (define routes and middleware here)
-
+app.use(cors());
 //GETS
 const {getAllPatients} = require('./routes/get-all-patients');
 const {getAllDepartments} = require('./routes/get-all-departments');

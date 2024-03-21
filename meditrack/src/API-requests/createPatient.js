@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
 const Patientform = () => {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
+  const [first_name, setFirstName] = useState('');
+  const [last_name, setLastName] = useState('');
   const [address, setAddress] = useState('');
-  const [healthCard, setHealthCard] = useState('');
+  const [health_card, setHealthCard] = useState('');
   const [phone, setPhone] = useState('');
   const [dob, setDob] = useState('');
   const [gender, setGender] = useState('');
@@ -17,10 +17,10 @@ const Patientform = () => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                first_Name,
-                last_Name,
+                first_name,
+                last_name,
                 address,
-                health_Card,
+                health_card,
                 phone,
                 dob,
                 gender,
@@ -40,22 +40,22 @@ const Patientform = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     submitForm();
-    console.log({ firstName, lastName, address, healthCard, phone, dob, gender });
+    console.log({ first_name, last_name, address, health_card, phone, dob, gender });
   };
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col items-center">
       <label htmlFor="firstName" className="mb-2">First Name:</label>
-      <input type="text" id="firstName" value={firstName} onChange={(e) => setFirstName(e.target.value)} className="mb-4 px-3 py-2 border border-gray-300 rounded-md" />
+      <input type="text" id="firstName" value={first_name} onChange={(e) => setFirstName(e.target.value)} className="mb-4 px-3 py-2 border border-gray-300 rounded-md" />
 
       <label htmlFor="lastName" className="mb-2">Last Name:</label>
-      <input type="text" id="lastName" value={lastName} onChange={(e) => setLastName(e.target.value)} className="mb-4 px-3 py-2 border border-gray-300 rounded-md" />
+      <input type="text" id="lastName" value={last_name} onChange={(e) => setLastName(e.target.value)} className="mb-4 px-3 py-2 border border-gray-300 rounded-md" />
 
       <label htmlFor="address" className="mb-2">Address:</label>
       <input type="text" id="address" value={address} onChange={(e) => setAddress(e.target.value)} className="mb-4 px-3 py-2 border border-gray-300 rounded-md" />
 
       <label htmlFor="healthCard" className="mb-2">Health Card:</label>
-      <input type="text" id="healthCard" value={healthCard} onChange={(e) => setHealthCard(e.target.value)} className="mb-4 px-3 py-2 border border-gray-300 rounded-md" />
+      <input type="text" id="healthCard" value={health_card} onChange={(e) => setHealthCard(e.target.value)} className="mb-4 px-3 py-2 border border-gray-300 rounded-md" />
 
       <label htmlFor="phone" className="mb-2">Phone:</label>
       <input type="tel" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} className="mb-4 px-3 py-2 border border-gray-300 rounded-md" />
@@ -66,9 +66,9 @@ const Patientform = () => {
       <label htmlFor="gender" className="mb-2">Gender:</label>
       <select id="gender" value={gender} onChange={(e) => setGender(e.target.value)} className="mb-4 px-3 py-2 border border-gray-300 rounded-md">
         <option value="">Select...</option>
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-        <option value="other">Other</option>
+        <option value="male">M</option>
+        <option value="female">F</option>
+        <option value="other">O</option>
       </select>
 
       <button type="submit" className="px-4 py-2 bg-blue-500 text-white rounded-md">Submit</button>
@@ -77,5 +77,4 @@ const Patientform = () => {
 };
 
 export default Patientform;
-
 

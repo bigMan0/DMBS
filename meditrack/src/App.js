@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import createPatient from './API-Requests/createPatient'; 
+import Patientform from './API-requests/createPatient'; 
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
       </header>
       <div>
         <h1>Create a new Patient</h1>
-          <createPatient/>
+          <Patientform/>
       </div>
     </div>
   );
