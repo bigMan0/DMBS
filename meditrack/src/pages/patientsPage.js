@@ -58,13 +58,17 @@ function PatientsPage() {
   };
   const handleEditFormSubmit = async (event) => {
     event.preventDefault();
-    const response = await fetch(`http://localhost:5000/Bookings/${editFormData.appointment_number}`, {
+    
+    const { appointment_number, appointment_date, appointment_time } = editFormData;
+  
+    const response = await fetch(`http://localhost:5000/Bookings/${editFormData.appointment_number}`,{
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(editFormData),
+      body: JSON.stringify({ appointment_number, appointment_date, appointment_time }),
     });
+  
     if (response.ok) {
       fetchPatientAndRecords();
       setIsEditFormVisible(false);
