@@ -12,7 +12,7 @@ exports.removeBooking = async (req, res, supabase) => {
             return res.status(500).json({ message: "There was an error removing the booking" });
         }
 
-        res.json({ message: 'Procedeur  removed successfully' });
+        res.json({ message: 'Booking removed successfully' });
     } catch (error) {
         console.error(error);
         console.log("There was an error removing the booking");

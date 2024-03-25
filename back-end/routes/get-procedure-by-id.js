@@ -16,7 +16,7 @@ exports.getProcedureById = async (req, res, supabase) => {
             return res.status(404).json({ message: 'Procedure not found' });
         }
 
-        res.json(data[0]);
+        res.json(data);
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Error fetching procedure' });

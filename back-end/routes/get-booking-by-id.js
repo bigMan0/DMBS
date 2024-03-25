@@ -9,7 +9,7 @@ exports.getBookingbyId = async (req, res, supabase) => {
         if (data.length === 0){
             return res.status(404).json({message: 'Bookings not found'});
         }
-        res.json(data[0]);
+        res.json(data);
     } catch(error){
         console.error(err);
         res.status(500).json({message: 'Error fetching Bookings'})

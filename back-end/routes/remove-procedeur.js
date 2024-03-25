@@ -1,11 +1,11 @@
 exports.removeProcedeur = async (req, res, supabase) => {
-    const { health_card } = req.params;
+    const { procedure_number } = req.params;
     try {
         // Delete the patient's records
         const { error } = await supabase
-            .from('Procedeur')
+            .from('Procedures')
             .delete()
-            .eq('health_card', health_card);
+            .eq('procedure_number', procedure_number);
         if (error) {
             console.error(error);
             console.log("There was an error removing the Procedeur");

@@ -1,4 +1,4 @@
-exports.getAllBookings = async (req, res) => {
+exports.getAllBookings = async (req, res, supabase) => {
     try {
       const { data, error } = await supabase.from('Bookings').select('*'); 
       if (error) {
