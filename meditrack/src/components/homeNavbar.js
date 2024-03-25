@@ -7,9 +7,12 @@ function HomeNavbar() {
       <div className="container">
           <Navbar bg="primary" variant="dark" className='rounded-3'>
               <Container>
-              <Navbar.Brand>MediTrack</Navbar.Brand>
-              <Nav className="me-auto">
-                  <Nav.Link as={Link} to="/patients-page">Login</Nav.Link>
+              <Nav>
+                <Navbar.Brand>MediTrack</Navbar.Brand>
+              </Nav>
+              <Nav>
+                <Nav.Link as={Link} to="/patients-page">Login</Nav.Link>
+                <Nav.Link as={Link} to="/admin-page">Admin</Nav.Link>
               </Nav>
               </Container>
           </Navbar>

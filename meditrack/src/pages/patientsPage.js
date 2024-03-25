@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Form, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom'; // Import Link
 import PatientsNavbar from '../API-requests/patientsNavbar'; // Import PatientsNavbar
 
@@ -206,27 +207,32 @@ function PatientsPage() {
     ) : searchPerformed ?(
       <p className="mt-3">No bookings found.</p>
     ) : null}
-       {searchPerformed && <Link to="/add-booking" className="btn btn-success ml-2">Book Appointment</Link>}
-    {/* // Add an edit form that is shown when the edit button is clicked */}
-    {isEditFormVisible && (
-      
-      <form onSubmit={handleEditFormSubmit}>
-        <label>
-          Appointment Number:
-          <input type="text" value={editFormData.appointment_number} onChange={e => setEditFormData({ ...editFormData, appointment_number: e.target.value })} />
-        </label>
-        <label>
-          New Appointment Date:
-          <input type="date" value={editFormData.appointment_date} onChange={e => setEditFormData({ ...editFormData, appointment_date: e.target.value })} />
-        </label>
-        <label>
-          New Appointment Time:
-          <input type="time" value={editFormData.appointment_time} onChange={e => setEditFormData({ ...editFormData, appointment_time: e.target.value })} />
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
-    )}
 
+      {/* // Add an edit form that is shown when the edit button is clicked */}
+      {isEditFormVisible && (
+      <Form className="mb-4"onSubmit={handleEditFormSubmit}>
+      <Form.Group className="mb-4"controlId="formAppointmentNumber">
+        <Form.Label>Appointment Number</Form.Label>
+        <Form.Control type="text" value={editFormData.appointment_number} onChange={e => setEditFormData({ ...editFormData, appointment_number: e.target.value })} />
+      </Form.Group>
+    
+      <Form.Group className="mb-4" controlId="formAppointmentDate">
+        <Form.Label>New Appointment Date</Form.Label>
+        <Form.Control type="date" value={editFormData.appointment_date} onChange={e => setEditFormData({ ...editFormData, appointment_date: e.target.value })} />
+      </Form.Group>
+    
+      <Form.Group className="mb-4" controlId="formAppointmentTime">
+        <Form.Label>New Appointment Time</Form.Label>
+        <Form.Control type="time" value={editFormData.appointment_time} onChange={e => setEditFormData({ ...editFormData, appointment_time: e.target.value })} />
+      </Form.Group>
+    
+      <Button variant="primary" type="submit">
+        Submit
+      </Button>
+    </Form>
+    )}
+    {searchPerformed && <Link to="/add-booking" className="btn btn-success ml-2">Book Appointment</Link>}
+  
     {procedures && procedures.health_card ? (
       <div className="card container mt-5 mb-5">
         <div className="card-header">

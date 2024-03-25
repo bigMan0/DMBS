@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 //import NavbarComp from './components/Navbar';
 import PatientsPage from './pages/patientsPage';
+import AdminPage from './pages/adminPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path = "/patients-page" element={<><PatientsPage/></>} />
           <Route path="/search-patients" element={<><SearchPatients/></>} />
           <Route path="/add-booking" element={<><AddBookings/></>} />
+          <Route path="/admin-page" element={<><AdminPage/></>} />
         </Routes>
         </header>
       </div>
