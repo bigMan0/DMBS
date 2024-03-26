@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function PatientsTable() {
@@ -68,6 +69,15 @@ function PatientsTable() {
           ))}
         </tbody>
       </table>
+      <Link to="/create-patient">
+      <button className="btn btn-primary">Add Patient</button>
+      </Link>
+      <Link to="/delete-patient">
+      <button className="btn btn-danger">Delete Patient</button>
+      </Link>
+      <Link to="/update-patient">
+      <button className="btn btn-warning">Update Patient</button>
+      </Link>
     </div>
   );
 }

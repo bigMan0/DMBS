@@ -15,10 +15,14 @@ exports.updatePatient = async (req, res, supabase) => {
         if (error) {
             console.error(error);
             console.log("There was an error updating patient details");
+            res.status(500).json({ message: "There was an error updating patient details" });
+        } else {
+            console.log("Patient details updated successfully");
+            res.json({ message: "Patient details updated successfully", data: data });
         }
-        res.json(data[0]);
     } catch (error) {
         console.error(error);
         console.log("There was an error updating patient details");
+        res.status(500).json({ message: "There was an error updating patient details" });
     }
 };
