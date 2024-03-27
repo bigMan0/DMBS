@@ -48,7 +48,7 @@ function RecordsTable() {
 
             <th>Health Card Number</th>
             <th>Record Details</th>
-            <th>Record Date</th>
+            <th>Prescriptions</th>
             {/* Add more columns as needed */}
           </tr>
         </thead>
