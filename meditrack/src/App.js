@@ -15,7 +15,7 @@ import AdminPage from './pages/adminPage';
 function App() {
   return (
     <Router>
-      <div className="App container-fluid bg-dark">
+      <div className="App container-fluid">
         <header className="App-header">
         {/* <NavbarComp/> */}
         <Routes>

@@ -7,12 +7,12 @@ function Homepage() {
     <> 
     <HomeNavbar/>
     <div className="main">
-      <header className="container my-1 text-white rounded-3">
+      <header className="container my-1 text-dark rounded-3">
         <h1 className="display-5 fw-bold">Welcome to MediTrack</h1>
         <p className="col-md-8 lead">MediTrack is a patient management system that allows you to create, view, and search for patients.</p>
         <button className="btn btn-primary btn-lg" type="button">Learn more</button>
       </header>
-      <div className="container my-1 text-white rounded-3">
+      <div className="container my-1 text-dark rounded-3">
         <h1 className="display-5 fw-bold">Features</h1>
         <p className="col-md-8 lead">MediTrack has the following features:</p>
 
