@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import PatientsNavbar from './patientsNavbar';
 
 const UpdatePatientForm = () => {
   const [health_card, setHealthCard] = useState('');
+  const [first_name, setFirstName] = useState('');
   const [last_name, setLastName] = useState('');
   const [address, setAddress] = useState('');
   const [phone, setPhone] = useState('');
@@ -16,6 +18,8 @@ const UpdatePatientForm = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
+          health_card: health_card,
+          first_name: first_name,
           last_name: last_name,
           address: address,
           phone: phone,
@@ -37,7 +41,7 @@ const UpdatePatientForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (!health_card || !last_name || !address || !phone || !dob || !gender) {
+    if (!health_card || first_name || !last_name || !address || !phone || !dob || !gender) {
       alert('Please fill in all fields.');
       return;
     }
@@ -46,6 +50,8 @@ const UpdatePatientForm = () => {
   };
 
   return (
+    <>
+    <PatientsNavbar/>
     <div className='container shadow lg'>
       <h1>Update a Patient</h1>
       <br></br>
@@ -53,6 +59,10 @@ const UpdatePatientForm = () => {
       <div className="mb-3">
           <label htmlFor="healthCard" className="form-label">Health Card:</label>
           <input type="numeber" id="healthCard" value={health_card} onChange={(e) => setHealthCard(e.target.value)} className="form-control" />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="firstName" className="form-label">First Name:</label>
+          <input type="text" id="firstName" value={first_name} onChange={(e) => setFirstName(e.target.value)} className="form-control" />
         </div>
         <div className="mb-3">
           <label htmlFor="lastName" className="form-label">Last Name:</label>
@@ -78,6 +88,7 @@ const UpdatePatientForm = () => {
         <button type="submit" className="btn btn-primary">Update</button>
       </form>
     </div>
+    </>
   );
 };
 

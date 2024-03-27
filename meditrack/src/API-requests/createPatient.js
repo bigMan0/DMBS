@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PatientsNavbar from './patientsNavbar';
 
 const Patientform = () => {
   const [first_name, setFirstName] = useState('');
@@ -68,6 +69,8 @@ const Patientform = () => {
   };
 
   return (
+    <>
+    <PatientsNavbar/>
     <div className='container shadow lg'>
       <h1>Create a new Patient</h1>
       <br></br>
@@ -106,15 +109,16 @@ const Patientform = () => {
           <label htmlFor="gender" className="form-label">Gender:</label>
           <select id="gender" value={gender} onChange={(e) => setGender(e.target.value)} className="form-control">
             <option value="">Select...</option>
-            <option value="male">M</option>
-            <option value="female">F</option>
-            <option value="other">O</option>
+            <option value="M">M</option>
+            <option value="F">F</option>
+            <option value="O">O</option>
           </select>
         </div>
 
         <button type="submit" className="btn btn-primary">Submit</button>
       </form>
       </div>
+    </>
   );
 };
 
