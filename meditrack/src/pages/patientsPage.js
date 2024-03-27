@@ -233,7 +233,7 @@ function PatientsPage() {
     )}
     {searchPerformed && <Link to="/add-booking" className="btn btn-success ml-2">Book Appointment</Link>}
   
-    {procedures && procedures.health_card ? (
+    {procedures ? (
       <div className="card container mt-5 mb-5">
         <div className="card-header">
           <h2>Procedures</h2>
@@ -248,11 +248,13 @@ function PatientsPage() {
               </tr>
             </thead>
             <tbody>
+              {procedures.map((procedures) => (
               <tr key={procedures.health_card}>
                 <td>{procedures.procedure_number}</td>
                 <td>{procedures.procedure_info}</td>
                 <td>{procedures.procedure_date}</td>
               </tr>
+            ))}
             </tbody>
           </table>
         </div>

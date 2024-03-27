@@ -8,7 +8,7 @@ function HomeNavbar() {
           <Navbar bg="primary" variant="dark" className='rounded-3'>
               <Container>
               <Nav>
-                <Navbar.Brand>MediTrack</Navbar.Brand>
+                <Navbar.Brand as={Link} to="/">MediTrack</Navbar.Brand>
               </Nav>
               <Nav>
                 <Nav.Link as={Link} to="/patients-page">Login</Nav.Link>
