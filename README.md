@@ -1,4 +1,4 @@
-# DMBS
+# DBMS
 # Medi-Track | An easy solution to the problem of accessing  medical records.
 
 
